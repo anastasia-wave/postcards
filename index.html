@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Открытки</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="main-card">
+
+            <h1>Новая открытка</h1>
+            <p class="subtitle">Напишите что-нибудь ♡</p>
+
+            <!-- ТЕКСТ -->
+            <label for="text">Текст</label>
+
+            <textarea
+                id="text"
+                placeholder="Введите сообщение..."
+            ></textarea>
+
+            <!-- ОТ КОГО -->
+            <label for="from">От кого</label>
+
+            <input
+                type="text"
+                id="from"
+                placeholder="Ваше имя"
+            >
+
+            <!-- КОМУ -->
+            <label for="to">Кому</label>
+
+            <input
+                type="text"
+                id="to"
+                placeholder="Имя получателя"
+            >
+
+            <label for="theme">Тема открытки</label>
+            <select id="theme">
+                <option value="emo">Эмо</option>
+                <option value="kitty" selected>Hello Kitty</option>
+                <option value="normis">Нормис — светлая</option>
+                <option value="night">Ночь — тёмная</option>
+                <option value="sea">Море</option>
+            </select>
+            <p class="theme-title">Предпросмотр открытки</p>
+            <div id="preview" class="message-card kitty"></div>
+            <p id="status" role="status"></p>
+
+            <!-- ОТПРАВИТЬ -->
+            <button
+                id="send" class="send-button" disabled
+                onclick="sendMessage()"
+            >
+                Отправить ♡
+            </button>
+
+        </div>
+
+        <!-- ОТПРАВЛЕННЫЕ СООБЩЕНИЯ -->
+
+        <div class="messages-section">
+
+            <h2>История открыток</h2>
+
+            <div id="messages"></div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
